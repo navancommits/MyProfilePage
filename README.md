@@ -1,3 +1,6 @@
+#End result
+![image](https://github.com/user-attachments/assets/da4a0924-c3db-4cc3-8193-00c00e5bf695)
+
 # my-store
 
 This template should help get you started developing with Vue 3 in Vite.
