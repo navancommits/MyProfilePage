@@ -30,7 +30,7 @@ header {
 .logo {
   display: block;
   margin: 0 auto 2rem;
-  border-radius:80px;
+  border-radius:10px;
   height: 8rem;
   width:8rem;
 }
@@ -44,7 +44,7 @@ header {
 
   .logo {
     margin: 0 2rem 0 0;
-    border-radius:80px;
+    border-radius:10px;
     height: 8rem;
     width:8rem;
   }
