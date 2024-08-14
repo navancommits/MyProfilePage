@@ -27,7 +27,7 @@ const contentSlotName='content'
 
   <ProfileItem>
     <template #icon>
-      <BlogIcon />
+      <BlogIcon alt="my blog icon alt"  />
     </template>
     <template #heading>My Blog spot</template>
     <template #[contentSlotName]>
