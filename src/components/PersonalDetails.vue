@@ -8,13 +8,18 @@ defineProps({
     type: String
   }
 })
+
+let styledFallbackValue={color:"purple", text: "No blurb present", style:"italic"}
 </script>
 
 <template>
   <div class="personalinfo">
     <h1 class="blue">{{ name }}</h1>
-    <h3>
+    <h3 v-if="blurb">
       {{blurb}}
+    </h3>
+    <h3 v-else>
+      <div v-styledfallback=styledFallbackValue></div>
     </h3>
   </div>
 </template>

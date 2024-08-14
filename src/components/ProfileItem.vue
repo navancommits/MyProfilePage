@@ -1,3 +1,8 @@
+<script setup>
+
+let styledFallbackVal={color:'maroon',text:"Not provided"}
+
+</script>
 <template>
   <div class="item">
     <i>
@@ -7,7 +12,7 @@
       <h3>
         <slot name="heading" suffix=" Profile"></slot>
       </h3>
-      <slot name="content">NA</slot>
+      <slot name="content"><div v-styledfallback="styledFallbackVal"></div></slot>
     </div>
   </div>
 </template>
