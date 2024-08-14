@@ -14,7 +14,7 @@ provide('abtalt',"About navan")
    <img alt="navan logo" class="logo" src="../assets/navan.jpg" />
 
     <div class="wrapper">
-      <PersonalDetails name="Navan Sundarrajan" blurb="This is my page" />
+      <PersonalDetails name="Navan Sundarrajan" blurb="Welcome to my page" />
     </div>
   </personal> 
 </template>
@@ -29,7 +29,7 @@ personal {
   margin: 0 auto 2rem;
   width:125px;
   height:125px;
-  border-radius:10px;
+  border-radius:80px;
 }
 
 @media (min-width: 1024px) {
@@ -43,7 +43,7 @@ personal {
     margin: 0 2rem 0 0;
     width:125px;
     height:125px;
-    border-radius:10px;
+    border-radius:80px;
   }
 
   personal .wrapper {
