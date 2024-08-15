@@ -4,6 +4,7 @@ import ProfileDetails from "./ProfileDetails.vue"
 import {provide} from 'vue'
 
 provide('abtalt',"About navan")
+const htmlString="<img alt='navan logo' src='https://st2.depositphotos.com/1029150/6507/i/380/depositphotos_65071649-stock-photo-golden-alphabet-letter-n.jpg' />"
 </script>
 
 <template>
@@ -11,7 +12,7 @@ provide('abtalt',"About navan")
     <ProfileDetails />
   </main>
   <personal>
-   <img alt="navan logo" class="logo" src="../assets/navan.jpg" />
+    <div v-html="htmlString" />
 
     <div class="wrapper">
       <PersonalDetails name="Navan Sundarrajan" blurb="Welcome to my page" />
