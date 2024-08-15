@@ -4,7 +4,7 @@ import ProfileDetails from "./ProfileDetails.vue"
 import {provide} from 'vue'
 
 provide('abtalt',"About navan")
-const htmlString="<img alt='navan logo' src='https://st2.depositphotos.com/1029150/6507/i/380/depositphotos_65071649-stock-photo-golden-alphabet-letter-n.jpg' />"
+const htmlString="<center><img alt='navan logo' src='https://www.kaisercraft.com.au/cdn/shop/products/N_8b5d93b1-fda7-48c8-81b1-c35ab5983aee.jpg?v=1653445681&width=200' /></center>"
 </script>
 
 <template>
