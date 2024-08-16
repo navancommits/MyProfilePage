@@ -49,7 +49,7 @@ h3 {
 
 @media (min-width: 1024px) {
   .item {
-    margin: 5px 0px 10px 0px;
+    margin: 5px 0px 15px 0px;
     padding: 0.4rem calc(var(--section-gap) / 3) 1rem calc(var(--section-gap) / 3);
     border: 1px solid #888888;
     box-shadow: 5px 14px 18px gray;
