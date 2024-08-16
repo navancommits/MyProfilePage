@@ -1,9 +1,25 @@
 <script setup>
+
 import PersonalDetails from "./PersonalDetails.vue"
-import ProfileDetails from "./ProfileDetails.vue"
-import {provide} from 'vue'
+//import ProfileDetails from "./ProfileDetails.vue"
+import {provide,defineAsyncComponent} from 'vue'
+import LoadingComponent from "./LoadingComponent.vue"
+import ErrorComponent from "./ErrorComponent.vue"
 
 provide('abtalt',"About navan")
+
+const ProfileDetailsAsync=defineAsyncComponent({
+  loader: ()=>import("./ProfileDetails.vue"),
+
+  loadingComponent: LoadingComponent,
+
+  delay: 0,
+
+  errorComponent: ErrorComponent,
+
+  timeout: 2000
+})
+
 </script>
 
 <template>
@@ -16,7 +32,7 @@ provide('abtalt',"About navan")
   </personal>
 
   <main>
-    <ProfileDetails />
+    <ProfileDetailsAsync />
   </main>
 </template>
 

@@ -1,4 +1,6 @@
 <script setup>
+import {ref,reactive} from 'vue'
+
 defineProps({
   name: {
     type: String,
@@ -9,10 +11,10 @@ defineProps({
   }
 })
 
-let styledFallbackValue={color:"purple", text: "No blurb present", style:"italic"}
+const styledFallbackValue=reactive({color:"purple", text: "No blurb present", style:"italic"})
 </script>
 
-<template>
+<template>  
   <div class="personalinfo">
     <h1 class="blue">{{ name }}</h1>
     <h3 v-if="blurb">
@@ -32,8 +34,11 @@ h1 {
   top: 0px;
 }
 
+
 h3 {
   font-size: 1.2rem;
+  padding-left: 10px;
+  
 }
 
 .personalinfo h1,
@@ -41,7 +46,7 @@ h3 {
   text-align: center;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1024px) {  
   .personalinfo h1,
   .personalinfo h3 {
     text-align: left;

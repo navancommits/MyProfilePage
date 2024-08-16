@@ -5,6 +5,8 @@
   margin: 0 auto;
   padding: 2rem;
   font-weight: normal;
+  font-size:16px;
+  font-family:Arial, Helvetica, sans-serif
 }
 
 a,
@@ -22,9 +24,9 @@ a,
   padding: 3px;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
+@media (hover: hover) {  
+  a {
+    color:blue;
   }
 }
 

@@ -21,12 +21,12 @@ let styledFallbackVal={color:'maroon',text:"Not provided"}
 .item {
   margin-top: 2rem;
   display: flex;
-  position: relative;
+  position: relative; 
 }
 
 .details {
   flex: 1;
-  margin-left: 1rem;
+  margin-left: 1rem;  
 }
 
 i {
@@ -44,12 +44,15 @@ h3 {
   font-weight: 500;
   margin-bottom: 0.4rem;
   color: var(--color-heading);
+  font-weight:bold;
 }
 
 @media (min-width: 1024px) {
   .item {
-    margin-top: 0;
-    padding: 0.4rem 0 1rem calc(var(--section-gap) / 2);
+    margin: 5px 0px 10px 0px;
+    padding: 0.4rem calc(var(--section-gap) / 3) 1rem calc(var(--section-gap) / 3);
+    border: 1px solid #888888;
+    box-shadow: 5px 14px 18px gray;
   }
 
   i {
