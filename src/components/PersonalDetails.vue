@@ -11,14 +11,23 @@ defineProps({
   }
 })
 
+const nickName=ref(null)
+const welcomeMsg=ref(null)
+
+defineExpose({
+  nickName,
+  welcomeMsg
+})
+
 const styledFallbackValue=reactive({color:"purple", text: "No blurb present", style:"italic"})
 </script>
 
 <template>  
   <div class="personalinfo">
-    <h1 class="blue">{{ name }}</h1>
+    <h1 class="blue" v-if="nickName">{{ nickName }}</h1>
+    <h1 class="blue" v-else>{{ name }}</h1>
     <h3 v-if="blurb">
-      {{blurb}}
+      {{welcomeMsg}} {{blurb}}
     </h3>
     <h3 v-else>
       <div v-styledfallback=styledFallbackValue></div>

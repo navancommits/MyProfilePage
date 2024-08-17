@@ -2,7 +2,7 @@
 
 import PersonalDetails from "./PersonalDetails.vue"
 //import ProfileDetails from "./ProfileDetails.vue"
-import {provide,defineAsyncComponent} from 'vue'
+import {provide,defineAsyncComponent,ref,onMounted,onBeforeMount} from 'vue'
 import LoadingComponent from "./LoadingComponent.vue"
 import ErrorComponent from "./ErrorComponent.vue"
 
@@ -20,6 +20,11 @@ const ProfileDetailsAsync=defineAsyncComponent({
   timeout: 2000
 })
 
+const child=ref(null)
+onMounted(()=> {
+  child.value.nickName="Navan"
+  child.value.welcomeMsg="Howdy! "
+})
 </script>
 
 <template>
@@ -27,7 +32,7 @@ const ProfileDetailsAsync=defineAsyncComponent({
    <img alt="navan logo" class="logo" src="../assets/navan.jpg" />
 
     <div class="wrapper">
-      <PersonalDetails name="Navan Sundarrajan" blurb="This is my page" />
+      <PersonalDetails name="Navan Sundarrajan" blurb="This is my page" ref="child" />
     </div>
   </personal>
 
