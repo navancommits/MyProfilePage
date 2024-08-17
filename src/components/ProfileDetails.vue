@@ -8,13 +8,18 @@ import YoutubeIcon from './icons/IconYoutube.vue'
 import AboutmeIcon from './icons/IconAboutme.vue'
 const contentSlotName='content'
 
+function handleUrl(url)
+{
+  window.location.href=url
+}
+
 </script>
 
 <template>
  
   <ProfileItem>
     <template #icon>
-      <AboutmeIcon />
+      <AboutmeIcon @hrefClick="handleUrl" />
     </template>
     <template #heading>About Me</template>
     <template #content>
@@ -27,7 +32,7 @@ const contentSlotName='content'
 
   <ProfileItem>
     <template #icon>
-      <BlogIcon alt="my blog icon alt"  />
+      <BlogIcon alt="my blog icon alt" @hrefClick="handleUrl"  />
     </template>
     <template #heading>My Blog spot</template>
     <template #[contentSlotName]>
@@ -42,7 +47,7 @@ const contentSlotName='content'
 
   <ProfileItem>
     <template #icon>
-      <LinkedInIcon />
+      <LinkedInIcon  v-on:hrefClick="handleUrl"  />
     </template>
     <template #heading=headerProps>LinkedIn{{headerProps.suffix}}</template>
     <template #content>
@@ -55,7 +60,7 @@ const contentSlotName='content'
 
   <ProfileItem>
     <template #icon>      
-      <GithubIcon />
+      <GithubIcon  @hrefClick="handleUrl"  />
     </template>
     <template #heading=headerProps>Github{{headerProps.suffix}}</template>
     <template #content>      
@@ -68,7 +73,7 @@ const contentSlotName='content'
 
   <ProfileItem>
     <template #icon>
-      <YoutubeIcon />
+      <YoutubeIcon  v-on:hrefClick="handleUrl"  />
     </template>
     <template #heading>Youtube</template>
     <template #content>  
