@@ -5,6 +5,7 @@ import PersonalDetails from "./PersonalDetails.vue"
 import {provide,defineAsyncComponent,ref,onMounted,onBeforeMount} from 'vue'
 import LoadingComponent from "./LoadingComponent.vue"
 import ErrorComponent from "./ErrorComponent.vue"
+import MyAgeTicker from './MyAgeTicker.vue'
 
 provide('abtalt',"About navan")
 
@@ -28,27 +29,32 @@ onMounted(()=> {
 </script>
 
 <template>
-  <personal>
-   <img alt="navan logo" class="logo" src="../assets/navan.jpg" />
+  <div>
+    <MyAgeTicker />
+    <personal>
+    
+      <img alt="navan logo" class="logo" src="../assets/navan.jpg" />
 
-    <div class="wrapper">
-      <PersonalDetails name="Navan Sundarrajan" blurb="This is my page" ref="child" />
-    </div>
-  </personal>
-
+      <div class="wrapper">
+        <PersonalDetails name="Navan Sundarrajan" blurb="This is my page" ref="child" />        
+      </div>
+      
+    </personal>
+  </div>
   <main>
     <ProfileDetailsAsync />
   </main>
+  
 </template>
 
 <style scoped>
 personal {
-  line-height: 1.5;
+  line-height: 1.5;  
 }
 
 .logo {
   display: block;
-  margin: 0 auto 2rem;
+  margin: 2rem auto 2rem;
   width:125px;
   height:125px;
   border-radius:10px;
@@ -62,7 +68,7 @@ personal {
   }
 
   .logo {
-    margin: 0 2rem 0 0;
+    margin: 20rem 2rem 0 0;
     width:125px;
     height:125px;
     border-radius:10px;
@@ -72,6 +78,7 @@ personal {
     display: flex;
     place-items: flex-start;
     flex-wrap: wrap;
+    margin: 20rem 2rem 0 0;
   }
 }
 </style>

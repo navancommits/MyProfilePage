@@ -2,6 +2,7 @@
 import PersonalDetails from "./PersonalDetails.vue"
 import ProfileDetails from "./ProfileDetails.vue"
 import {provide} from 'vue'
+import MyAgeTicker from './MyAgeTicker.vue'
 
 provide('abtalt',"About navan")
 const htmlString="<center><img alt='navan logo' src='https://www.kaisercraft.com.au/cdn/shop/products/N_8b5d93b1-fda7-48c8-81b1-c35ab5983aee.jpg?v=1653445681&width=200' /></center>"
@@ -13,16 +14,23 @@ const htmlString="<center><img alt='navan logo' src='https://www.kaisercraft.com
   </main>
   <personal>
     <div v-html="htmlString" />
-
+    <MyAgeTicker />
     <div class="wrapper">
       <PersonalDetails name="Navan Sundarrajan" blurb="Welcome to my page" />
+      
     </div>
+    
   </personal> 
+  
 </template>
 
 <style scoped>
 personal {
   line-height: 1.5;
+}
+
+.divstyle {
+  top: 50px;
 }
 
 .logo {

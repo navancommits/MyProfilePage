@@ -1,18 +1,34 @@
 {
   "name": "my-store",
-  "version": "0.0.0",
-  "private": true,
-  "type": "module",
+  "version": "0.0.0",  
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "vue": "^3.4.29"
+    "vue": "^3.4.29",
+    "@heroicons/vue": "^2.1.3",
+    "@tailwindcss/typography": "^0.5.13",
+    "happy-dom": "^14.11.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.5",
-    "vite": "^5.3.1"
+    "vite": "^5.3.1",
+    "@rushstack/eslint-patch": "^1.10.3",    
+    "@vue/eslint-config-prettier": "^9.0.0",
+    "@vue/test-utils": "^2.4.6",
+    "autoprefixer": "^10.4.19",
+    "eslint": "^9.3.0",
+    "eslint-plugin-vue": "^9.26.0",
+    "jsdom": "^24.0.0",
+    "postcss": "^8.4.38",
+    "prettier": "^3.2.5",
+    "tailwindcss": "^3.4.3",    
+    "vitest": "^1.6.0"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
