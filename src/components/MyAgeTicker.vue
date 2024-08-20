@@ -133,11 +133,13 @@ const Calculate=() =>
 
 <style scoped>
 .countdown-box {
-  box-shadow: 1rem 1rem 1rem 1rem #c8c8c8;  
+  box-shadow: 0rem 0.5rem 0.5rem 0rem #c8c8c8;  
 }
 .container {
   border-top:50px;
-  text-align:center;
+  text-align:left;
+  padding-left: 20px;
   font-style:italic;  
+  padding-bottom: 10px;  
 }
 </style>
