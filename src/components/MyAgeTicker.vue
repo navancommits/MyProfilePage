@@ -6,7 +6,9 @@ import { computed, onUnmounted, onMounted, ref } from "vue";
 // make reactive now
 let now = ref(new Date());
 let interval = ref(0)
-onUnmounted(() => clearInterval(interval));
+onUnmounted(() => {clearInterval(interval)
+cancelAnimationFrame(handle)
+});
 
 const birthDate=ref('27')
 let birthMonth=ref('04')
@@ -36,7 +38,7 @@ const Calculate=() =>
   let dob = new Date(birthYear.value, birthMonth.value-1,birthDate.value, birthHour.value, birthMinutes.value, birthSeconds.value);
     
   interval.value = setInterval(() => (now.value = new Date()), 1000);
-  //console.log('dobvvvv' +  Number(dob.getFullYear()))
+  //console.log('dob' +  Number(dob.getFullYear()))
   if (dob>now.value)
   {
     //not handling greater than current date 
@@ -56,23 +58,13 @@ const Calculate=() =>
   
   //get the year diff
   yearsRounded.value = now.value.getFullYear() - birthYear.value;
-  //console.log("years" + yearsRounded.value)
-
+ 
   if (birthDate.value > now.value.getDate()) 
     //if birth date alone is greater than current date, calc month till current one
     monthsRounded.value = now.value.getMonth() - dob.getMonth()-1  
   else
     //if birth date alone is less than current date, this number is definitely 1 more than prev case
     monthsRounded.value = now.value.getMonth()+1 - dob.getMonth()-1
-
-  //console.log("months rounded" + monthsRounded.value)
-  
-  //console.log(days.value)
-  
-  //console.log("month index" + now.value.getMonth())
-  //console.log("days in prev month" + daysInMonth(now.value.getYear(),now.value.getMonth()))
-  
-  //console.log('next'+actualMonthsRounded.value)
 
   if (monthsRounded.value<0) {
     //if month is greater than current month, it could be negative so, normalize it
@@ -121,7 +113,6 @@ const Calculate=() =>
     actualDaysRounded.value=daysRounded.value     
   }
 
-  //console.log('last'+actualMonthsRounded.value)
   hours.value = 24 * (days.value - daysRounded.value);
   hoursRounded.value =  Math.floor(hours.value);
   minutes.value = 60 * (hours.value - hoursRounded.value);
